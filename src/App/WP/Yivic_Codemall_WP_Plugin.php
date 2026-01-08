@@ -13,8 +13,8 @@ class Yivic_Codemall_WP_Plugin extends WP_Plugin {
 		add_action( 'wp_head', [ $this, 'add_meta_tag' ] );
 
 		// We must call the methods `register_routes` and `register_api_routes` here
-		app()->register_routes( [ $this, 'register_routes' ] );
-		app()->register_api_routes( [ $this, 'register_api_routes' ] );
+		wp_app()->register_routes( [ $this, 'register_routes' ] );
+		wp_app()->register_api_routes( [ $this, 'register_api_routes' ] );
 	}
 
 	public function get_name(): string {
