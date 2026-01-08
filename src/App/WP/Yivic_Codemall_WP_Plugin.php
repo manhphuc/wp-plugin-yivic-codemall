@@ -28,7 +28,7 @@ class Yivic_Codemall_WP_Plugin extends WP_Plugin {
 	public function add_meta_tag(): void {
 		// We use this class in the method body to avoid the loading of the class to the memory
 		//  the job class is only loaded when the hook actually fires
-		Write_Meta_Tag::exec(
+		Write_Meta_Tag::execute_now(
 			[
 				'version' => YIVIC_CODEMALL_VERSION,
 			]
@@ -36,10 +36,10 @@ class Yivic_Codemall_WP_Plugin extends WP_Plugin {
 	}
 
 	public function register_routes(): void {
-		Register_Yivic_Codemall_Routes::exec();
+		Register_Yivic_Codemall_Routes::execute_now();
 	}
 
 	public function register_api_routes(): void {
-		Register_Yivic_Codemall_Api_Routes::exec();
+		Register_Yivic_Codemall_Api_Routes::execute_now();
 	}
 }
