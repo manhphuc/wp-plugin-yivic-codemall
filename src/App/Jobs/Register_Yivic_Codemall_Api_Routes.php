@@ -10,10 +10,6 @@ use Illuminate\Support\Facades\Route;
 class Register_Yivic_Codemall_Api_Routes {
 	use Executable_Trait;
 
-	public function execute(): void {
-		$this->handle();
-	}
-
 	public function handle(): void {
 		Route::get( 'yivic/codemall', [ Yivic_Codemall_Api_Controller::class, 'hello' ] );
 	}

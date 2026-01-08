@@ -16,10 +16,6 @@ class Write_Meta_Tag {
 		$this->bind_config( $config, true );
 	}
 
-	public function execute(): void {
-		$this->handle();
-	}
-
 	public function handle(): void {
 		printf( '<meta name="generator" content="Yivic Codemall %s" />', esc_attr( $this->version ) );
 	}
